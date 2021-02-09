@@ -1,0 +1,106 @@
+.user-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 21px;
+    list-style-type: none;
+
+    @media screen and (min-width: @width-medium) {
+        margin-left: auto;
+        padding-top: 0;
+    }
+}
+
+.navigation--active .user-list {
+    display: flex;
+}
+
+.user-list__link-wrapper {
+    flex-grow: 1;
+    height: 34px;
+
+    @media screen and (min-width: @width-medium) {
+        width: 30px;
+    }
+}
+
+.user-list__link-wrapper:nth-child(n + 2) {
+    @media screen and (min-width: @width-medium) {
+        margin-left: 20px;
+    }
+}
+
+.user-list__link-wrapper--favourites {
+    order: 0;
+
+    @media screen and (min-width: @width-medium) {
+        order: 1;
+    }
+}
+.user-list__link-wrapper--cart {
+    order: 1;
+
+    border: 1px solid #eaeaea;
+    border-top: none;
+    border-bottom: none;
+
+    @media screen and (min-width: @width-medium) {
+        border: none;
+        order: 0;
+    }
+}
+.user-list__link-wrapper--login {
+    order: 2;
+}
+
+.user-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @media screen and (min-width: @width-medium) {
+        justify-content: initial;
+    }
+}
+
+.user-list__icon {
+    display: none;
+
+    @media screen and (min-width: @width-medium) {
+        display: initial;
+    }
+}
+
+.user-list__link:hover .user-list__icon {
+    fill: @color-main;
+}
+
+.user-list__link--favourites {
+    background-image: url("../img/navigation/icon-heart-filled.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media screen and (min-width: @width-medium) {
+        background: none;
+    }
+}
+
+.user-list__link--cart {
+    background-image: url("../img/navigation/icon-cart-filled.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media screen and (min-width: @width-medium) {
+        background: none;
+    }
+}
+
+.user-list__link--login {
+    background-image: url("../img/navigation/icon-user-filled.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media screen and (min-width: @width-medium) {
+        background: none;
+    }
+}

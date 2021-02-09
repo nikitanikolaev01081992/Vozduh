@@ -1,0 +1,61 @@
+.feedback {
+    position: relative;
+    padding: 0 24px;
+
+    height: calc(100vh - 50px); //full screen height minus height of navigation menu
+
+    @media screen and (min-width: @width-medium) {
+        height: auto;
+        padding: 215px 24px;
+    }
+}
+
+.feedback__slogan {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+
+    color: @color-basic-light;
+
+    @media screen and (min-width: @width-medium) {
+        margin-bottom: 15px;
+
+        font-size: 72px;
+        line-height: 84px;
+    }
+}
+
+.feedback__button,
+.feedback__button:visited {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 27px 16px;
+
+    width: 208px;
+
+    text-decoration: none;
+
+    color: @color-basic-light;
+    background-color: @color-main;
+
+    border-radius: 50px;
+
+    &:hover {
+        background-color: darken(@color-main, 5%);
+    }
+
+    &:active {
+        background-color: darken(@color-main, 10%);
+    }
+}
+
+.feedback__button h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+}
